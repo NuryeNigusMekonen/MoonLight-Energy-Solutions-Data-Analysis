@@ -2,3 +2,6 @@ data/
 *.csv
 *.docx
 *.pdf
+*.ipynb_checkpoints/
+venv/
+__pycache__/
