@@ -1,3 +1,4 @@
-git rm --cached -r data/
-git rm --cached *.csv
-git rm --cached *.docx
+data/
+*.csv
+*.docx
+*.pdf
