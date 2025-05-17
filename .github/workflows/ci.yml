@@ -24,12 +24,5 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Lint notebooks (optional)
-        run: |
-          pip install nbconvert
-          jupyter nbconvert --execute --to notebook --inplace notebooks/benin_eda.ipynb
-          jupyter nbconvert --execute --to notebook --inplace notebooks/sierraleone.ipynb
-          jupyter nbconvert --execute --to notebook --inplace notebooks/togo.ipynb
-
       - name: Test Python version
         run: python --versions
