@@ -2,18 +2,8 @@
  EDA pipeline to **Benin**, **Sierra Leone**, and **Togo**,
 
 * Summarizes the project and objective
-* Explains your process and structure
 * Shows how to run the analysis
 * Highlights insights and findings
-
----
-
-
-
-````markdown
-#  Cross-Country Solar Data Analysis – Week 0 Challenge
-
-This project is part of the 10 Academy Week 0 AI Mastery Challenge. It focuses on exploring and analyzing solar farm sensor data from **Benin**, **Sierra Leone**, and **Togo** to identify high-potential regions for solar investment.
 
 ---
 
@@ -25,11 +15,11 @@ As an analytics engineer at **MoonLight Energy Solutions**, my goal is to:
 - Compare performance across the three countries
 - Recommend optimal regions for solar installation based on data
 
----
+
 
 ## Project Structure
 
-```bash
+```
 MoonLight-Energy-Solutions-Data-Analysis/
 ├-- notebooks/
      benin.ipynb
@@ -72,14 +62,14 @@ Each country’s EDA notebook includes:
 
 ```bash
 git clone https://github.com/NuryeNigusMekonen/MoonLight-Energy-Solutions-Data-Analysis.git
-cd solar-challenge-week1
+cd MoonLight-Energy-Solutions-Data-Analysis
 ```
 
 2. **Create and activate a virtual environment**
 
 ```bash
 python -m venv week_0_venv
-source week_0_venv/bin/activate  # or `venv\Scripts\activate` on Windows
+source week_0_venv/bin/activate  # 
 ```
 
 3. **Install dependencies**
@@ -117,24 +107,24 @@ Togo-- had balanced environmental conditions and fewer outliers, making it a pro
 * You must add the raw datasets locally to run the notebooks.
 
 ---
+```
 ##  Sample EDA Results
-
+```
 
 ###  GHI vs Ambient Temperature (Bubble Size = RH)
 This bubble chart shows that GHI generally increases with ambient temperature, with bubble size representing relative humidity. Larger bubbles (higher RH) are often associated with lower GHI, suggesting a cloud impact.
-![Bubble Chart](graphs/benin_bubble_chart.png)
+![Bubble Chart](graphs/benin/benin_bubble_chart.png)
 
----
+
 
 ###  windorose plote
 
 to visulaize wind direction and speed this requires a special plot type
-![GHI Trend](graphs/windorose_plote.png)
+![GHI Trend](graphs/benin/windorose_plote.png)
 
----
 
 ## Author & Credits
-
+```
 👤 Author
 Nurye Nigus
 Electrical & Software Engineer
@@ -143,6 +133,6 @@ Electrical & Software Engineer
 🐙 GitHub:    @NuryeNigusMekonen
 📞 Phone :    +251929404324
 
----
+```
 
 
