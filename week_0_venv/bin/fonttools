@@ -1,0 +1,10 @@
+#!/bin/sh
+'''exec' /home/nurye/Desktop/10_Academy/week_0/WEEK_0_CHALLENGE/MoonLight-Energy-Solutions-Data-Analysis/MoonLight-Energy-Solutions-Data-Analysis/week_0_venv/bin/python3 "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+from fontTools.__main__ import main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())
