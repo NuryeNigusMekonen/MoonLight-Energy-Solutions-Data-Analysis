@@ -29,10 +29,24 @@ MoonLight-Energy-Solutions-Data-Analysis/
      ()
 |-- Data/
 |-- cleaned_data/
-|-- graphs/
-          benin/benin_bubble_chart.png
-          windorose_plote.png
+|-- test_data/
+          benin-malaville.ipynb
+          sierraleone-bumbuna.ipynb
+          togo-dapaong_qc.ipynb
 
+|-- graphs/
+          benin/
+          benin_bubble_chart.png
+          windorose_plote.png
+          
+          sierraleone/
+
+          sierraleone_bubble_chart.png
+          sierraleone_plote.png
+
+          togo/
+          togo_bubble_chart.png
+          togo_plote.png
 ├-- requirements.txt
 ├-- .gitignore
 └-- README.md
