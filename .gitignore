@@ -5,3 +5,4 @@ cleaned_data/
 *.ipynb_checkpoints/
 venv/
 __pycache__/
+week_0_venv/
