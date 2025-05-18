@@ -154,7 +154,12 @@ Visualizes wind direction and speed distributions in Malanville.
 ![Wind Rose](graphs/benin/windorose_plote.png)
 
 ---
+##  Continuous Integration & Test Data Handling
 
+The notebooks automatically switch to `test_data/` if `CI=true` is detected in the environment (used in GitHub Actions).  
+Data loading is modularized with error handling via a `load_data()` function, which improves reproducibility and CI compatibility.
+
+---
 ## 👤 Author & Credits
 
 **Nurye Nigus Mekonen**
