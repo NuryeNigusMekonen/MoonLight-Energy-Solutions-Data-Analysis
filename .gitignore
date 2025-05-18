@@ -1,6 +1,5 @@
 data/
 cleaned_data/
-*.csv
 *.docx
 *.pdf
 *.ipynb_checkpoints/
