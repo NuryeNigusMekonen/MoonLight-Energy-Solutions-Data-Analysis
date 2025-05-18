@@ -12,31 +12,31 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      CI: "true"  # used to convert to test data
+      CI: "true"  # Environment variable your notebook will check
 
     steps:
-      - name:  Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name:  Set up Python
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.12.2'
 
-      - name:  Install dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install nbconvert jupyter pandas matplotlib seaborn plotly scikit-learn
 
-      - name:  Run Benin EDA Notebook
+      - name: Run Benin EDA Notebook
         run: |
           jupyter nbconvert --to notebook --execute --inplace notebooks/benin_eda.ipynb
 
-      - name:  Run Sierra Leone EDA Notebook
+      - name: Run Sierra Leone EDA Notebook
         run: |
           jupyter nbconvert --to notebook --execute --inplace notebooks/sierraleone.ipynb
 
-      - name:  Run Togo EDA Notebook
+      - name: Run Togo EDA Notebook
         run: |
           jupyter nbconvert --to notebook --execute --inplace notebooks/togo.ipynb
