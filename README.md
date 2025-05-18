@@ -30,9 +30,9 @@ MoonLight-Energy-Solutions-Data-Analysis/
 |-- Data/
 |-- cleaned_data/
 |-- test_data/
-          benin-malaville.ipynb
-          sierraleone-bumbuna.ipynb
-          togo-dapaong_qc.ipynb
+          benin-malaville.csv
+          sierraleone-bumbuna.csv
+          togo-dapaong_qc.csv
 
 |-- graphs/
           benin/
