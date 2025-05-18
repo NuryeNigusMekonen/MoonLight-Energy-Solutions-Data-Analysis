@@ -1,152 +1,167 @@
 
- EDA pipeline to **Benin**, **Sierra Leone**, and **Togo**,
+```markdown
+#  MoonLight Energy Solutions – data analysis
 
-* Summarizes the project and objective
-* Shows how to run the analysis
-* Highlights insights and findings
+This repository contains an exploratory data analysis (EDA) pipeline for environmental sensor data collected from **Benin**, **Sierra Leone**, and **Togo**.
 
 ---
 
 ##  Project Objective
 
-As an analytics engineer at **MoonLight Energy Solutions**, my goal is to:
+As an analytics engineer at **MoonLight Energy Solutions**, the goal is to:
 - Clean and explore environmental sensor data
 - Detect anomalies, trends, and correlations
-- Compare performance across the three countries
-- Recommend optimal regions for solar installation based on data
+- Compare solar performance across the three countries
+- Recommend optimal regions for solar installation based on insights
 
+---
 
-
-## Project Structure
+##  Project Structure
 
 ```
+
 MoonLight-Energy-Solutions-Data-Analysis/
-├-- notebooks/
-     benin.ipynb
-     sierraleone.ipynb
-     togo.ipynb
-├-- scripts/
-     ()
-|-- Data/
-|-- cleaned_data/
-|-- test_data/
-          benin-malaville.csv
-          sierraleone-bumbuna.csv
-          togo-dapaong_qc.csv
+├── notebooks/
+   ├── benin.ipynb
+   ├── sierraleone.ipynb
+   └── togo.ipynb
+|── scripts/
+├── data/
+├── cleaned\_data/
+├── test\_data/
+   ├── benin-malanville.csv
+   ├── sierraleone-bumbuna.csv
+   └── togo-dapaong\_qc.csv
+|── graphs/
+   ├── benin/
+   ├── sierraleone/
+   └── togo/
+├── requirements.txt
+├── .gitignore
+├── setup.sh
+└── README.md
 
-|-- graphs/
-          benin/
-          benin_bubble_chart.png
-          windorose_plote.png
-          
-          sierraleone/
-
-          sierraleone_bubble_chart.png
-          sierraleone_plote.png
-
-          togo/
-          togo_bubble_chart.png
-          togo_plote.png
-├-- requirements.txt
-├-- .gitignore
-└-- README.md
 ````
 
 ---
 
-## Analysis Highlights
+## 🔍 Analysis Highlights
 
-Each country’s EDA notebook includes:
+Each country's EDA notebook includes:
+- Summary statistics & missing value report
+- Outlier detection and cleaning (Z-score method)
+- Time-series plots (daily & hourly GHI, Tamb)
+- Boxplots, histograms, and heatmaps
+- Wind rose plots and scatter plots
+- Bubble charts (GHI vs Tamb with RH as size)
+- Impact analysis of manual cleaning on panel performance
 
-* Summary statistics & missing value report
-* Outlier detection and cleaning (Z-score method)
-* Time-series plots (daily & hourly GHI, Tamb)
-* Boxplots, histograms, and heatmaps
-* Wind rose plots and scatter plots
-* Bubble charts (GHI vs Tamb with RH as size)
-* Impact analysis of manual cleaning on panel performance
-
-> All datasets were cleaned and saved locally, but are **excluded from the repo** per `.gitignore` rules.
+>  Raw datasets are excluded from the repo via `.gitignore`. `test_data/` contains mock CSVs for public testing and CI/CD.
 
 ---
 
-##  How to insall
+##  Version Control with Git
 
-1. **Clone the repository**
+This project was version-controlled using **Git** throughout the process:
+- All milestones were committed progressively (setup, cleaning, EDA, documentation)
+- GitHub was used for remote version control and collaboration
+- CI/CD integration via GitHub Actions automatically validates notebooks
+
+ View full commit history:  
+[GitHub commit log](https://github.com/NuryeNigusMekonen/MoonLight-Energy-Solutions-Data-Analysis/commits/main)
+
+---
+
+##  Environment Setup Instructions
+
+You can use the included `setup.sh` or follow these steps manually:
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/NuryeNigusMekonen/MoonLight-Energy-Solutions-Data-Analysis.git
 cd MoonLight-Energy-Solutions-Data-Analysis
-```
+````
 
-2. **Create and activate a virtual environment**
+### 2. Create and activate a virtual environment
 
 ```bash
 python -m venv week_0_venv
-source week_0_venv/bin/activate  # 
+source week_0_venv/bin/activate  # Windows: .\week_0_venv\Scripts\activate
 ```
 
-3. **Install dependencies**
+### 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. **Run notebooks**
-   Use Jupyter or VSCode to open and run the notebooks under the `notebooks/` directory.
+### 4. Run notebooks
+
+Use Jupyter or VSCode to open and run the notebooks in the `notebooks/` directory.
 
 ---
 
-## Key Insights
+##  Optional: Quick Setup via Bash Script
 
-Benin--showed strong midday irradiance and moderate wind stability. Cleaning events slightly improved panel output.
-Sierra Leone-- experienced more cloud cover and humidity, reducing direct irradiance (DNI).
-Togo-- had balanced environmental conditions and fewer outliers, making it a promising candidate for stable output.
+You can also use the automated setup script:
+
+```bash
+bash setup.sh
+```
+
+---
+
+##  Key Insights
+
+* **Benin**: Strong midday irradiance, moderate wind variability. Cleaning slightly improved ModA/ModB performance.
+* **Sierra Leone**: Higher humidity and cloud cover reduced direct irradiance (DNI).
+* **Togo**: Most balanced solar conditions and fewer anomalies — strong candidate for stable output.
 
 ---
 
 ##  Tools Used
 
 * Python, Pandas, NumPy
-* Matplotlib, Seaborn, Plotly
+* Seaborn, Matplotlib, Plotly
 * Jupyter Notebooks
-* Git & GitHub
-* Windrose library (for wind direction plots)
+* Git, GitHub, GitHub Actions (CI/CD)
+* Windrose library
 
 ---
 
 ##  Files Not Included
 
-* Raw and cleaned `.csv` files are located in `data/` and `cleaned_data/`, which are ignored via `.gitignore` for best practices.
-* You must add the raw datasets locally to run the notebooks.
+* Raw `.csv` files in `data/` and `cleaned_data/` are excluded via `.gitignore`
+* Use mock files from `test_data/` or add your own local data to run full EDA
 
 ---
-```
-##  Sample EDA Results
-```
 
-###  GHI vs Ambient Temperature (Bubble Size = RH)
-This bubble chart shows that GHI generally increases with ambient temperature, with bubble size representing relative humidity. Larger bubbles (higher RH) are often associated with lower GHI, suggesting a cloud impact.
+##  Sample EDA Results
+
+### 🔵 GHI vs Ambient Temperature (Bubble Size = RH)
+
+This bubble chart shows GHI generally increases with temperature, with larger RH values associated with reduced irradiance.
+
 ![Bubble Chart](graphs/benin/benin_bubble_chart.png)
 
+---
 
+###  Wind Rose Plot (Benin)
 
-###  windorose plote
+Visualizes wind direction and speed distributions in Malanville.
 
-to visulaize wind direction and speed this requires a special plot type
-![GHI Trend](graphs/benin/windorose_plote.png)
+![Wind Rose](graphs/benin/windorose_plote.png)
 
+---
 
-## Author & Credits
-```
-👤 Author
-Nurye Nigus
+## 👤 Author & Credits
+
+**Nurye Nigus Mekonen**
 Electrical & Software Engineer
-📧 Email :    nurye.nigus.me@gmail.com
-🌐 LinkedIn   (https://www.linkedin.com/in/nryngs/)
-🐙 GitHub:    @NuryeNigusMekonen
-📞 Phone :    +251929404324
+📧 [nurye.nigus.me@gmail.com](mailto:nurye.nigus.me@gmail.com)
+🔗 [LinkedIn](https://www.linkedin.com/in/nryngs/)
+🐙 [GitHub](https://github.com/NuryeNigusMekonen)
+📞 +251 929 404 324
 
-```
-
-
+---
