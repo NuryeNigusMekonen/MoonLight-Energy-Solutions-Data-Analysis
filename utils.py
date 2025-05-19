@@ -5,9 +5,9 @@ import streamlit as st
 
 def load_data(country):
     filename = {
-        "Benin": "cleaned_data/benin_cleaned_data.csv",
-        "Sierra Leone": "cleaned_data/sierraleone_cleaned_data.csv",
-        "Togo": "cleaned_data/togo_cleaned_data.csv"
+        "Benin": "../cleaned_data/benin_cleaned_data.csv",
+        "Sierra Leone": "../cleaned_data/sierraleone_cleaned_data.csv",
+        "Togo": "../cleaned_data/togo_cleaned_data.csv"
     }.get(country)
 
     try:
