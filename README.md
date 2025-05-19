@@ -140,7 +140,7 @@ bash setup.sh
 
 ##  Sample EDA Results
 
-### 🔵 GHI vs Ambient Temperature (Bubble Size = RH)
+###  GHI vs Ambient Temperature (Bubble Size = RH)
 
 This bubble chart shows GHI generally increases with temperature, with larger RH values associated with reduced irradiance.
 
@@ -154,9 +154,9 @@ Visualizes wind direction and speed distributions in Malanville.
 
 ![Wind Rose](graphs/benin/windorose_plote.png)
 
-###  Wind Rose Plot (Benin)
+###  average ghi image
 
-Visualizes wind direction and speed distributions in Malanville.
+comparing all contries 
 
 ![average_ghi](graphs/comparison_image/average_ghi.png)
 
@@ -166,7 +166,8 @@ Visualizes wind direction and speed distributions in Malanville.
 The notebooks automatically switch to `test_data/` if `CI=true` is detected in the environment (used in GitHub Actions).  
 Data loading is modularized with error handling via a `load_data()` function, which improves reproducibility and CI compatibility.
 
----
+
+```
 ## 👤 Author & Credits
 
 **Nurye Nigus Mekonen**
@@ -176,4 +177,5 @@ Electrical & Software Engineer
 🐙 [GitHub](https://github.com/NuryeNigusMekonen)
 📞 +251 929 404 324
 
+```
 ---
