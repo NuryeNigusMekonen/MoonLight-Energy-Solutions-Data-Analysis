@@ -154,6 +154,12 @@ Visualizes wind direction and speed distributions in Malanville.
 
 ![Wind Rose](graphs/benin/windorose_plote.png)
 
+###  Wind Rose Plot (Benin)
+
+Visualizes wind direction and speed distributions in Malanville.
+
+![average_ghi](graphs/comparison_image/average_ghi.png)
+
 ---
 ##  Continuous Integration & Test Data Handling
 
