@@ -22,20 +22,21 @@ As an analytics engineer at **MoonLight Energy Solutions**, the goal is to:
 
 MoonLight-Energy-Solutions-Data-Analysis/
 ├── notebooks/
-   ├── benin.ipynb
-   ├── sierraleone.ipynb
-   └── togo.ipynb
+   -- benin.ipynb
+   -- compair_countries.ipynb
+   -- sierraleone.ipynb
+   -- togo.ipynb
 |── scripts/
 ├── data/
 ├── cleaned\_data/
 ├── test\_data/
-   ├── benin-malanville.csv
-   ├── sierraleone-bumbuna.csv
-   └── togo-dapaong\_qc.csv
+   -- benin-malanville.csv
+   -- sierraleone-bumbuna.csv
+   -- togo-dapaong\_qc.csv
 |── graphs/
-   ├── benin/
-   ├── sierraleone/
-   └── togo/
+   -- benin/
+   -- sierraleone/
+   -- togo/
 ├── requirements.txt
 ├── .gitignore
 ├── setup.sh
