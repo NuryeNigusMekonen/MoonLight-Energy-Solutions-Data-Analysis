@@ -7,7 +7,7 @@ from utils import load_data
 # Set wide layout and custom title
 st.set_page_config(page_title=" Solar Insights Dashboard by Nurye Nigus", layout="wide")
 
-# ---- Sidebar ----
+#  Sidebar
 st.sidebar.title(" Controls")
 
 country = st.sidebar.selectbox(" Select Country", ["Benin", "Sierra Leone", "Togo"])
@@ -18,17 +18,17 @@ top_n = st.sidebar.slider(" Show Top N Values(5-50)", min_value=5, max_value=50,
 st.title(" Solar Irradiance Analysis Dashboard done by Nurye Nigus")
 st.markdown("Explore cleaned solar irradiance data across the three contries given")
 
-# ---- Load Data ----
+#  Load Data 
 df = load_data(country)
 if df.empty:
     st.error("No data available.")
     st.stop()
-# ---- Metrics Summary ----
+# Metrics Summary 
 st.subheader(f" Summary Statistics – {country}")
 st.dataframe(df[[metric]].describe().T.round(2))
-# ---- Plot & Table Layout ----
+# Plot & Table Layout 
 col1, col2 = st.columns([2, 1])
-# ---- Boxplot ----
+# Boxplot 
 with col1:
     st.subheader(f" Boxplot of {metric}")
     fig, ax = plt.subplots(figsize=(7, 4))
@@ -40,12 +40,12 @@ with col2:
     st.subheader(f" Top {top_n} Highest {metric} Readings")
     st.dataframe(df[[metric]].sort_values(by=metric, ascending=False).head(top_n).reset_index(drop=True))
 
-<<<<<<< HEAD
+
 # ---- Expander for Raw Data Preview ----
 with st.expander(" View Raw Data Sample"):
     st.dataframe(df.head(20))
 
-=======
+
 if df.empty:
     st.error("No data available.")
     st.stop()
