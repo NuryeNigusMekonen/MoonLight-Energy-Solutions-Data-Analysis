@@ -1,4 +1,4 @@
-import os
+
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -15,6 +15,6 @@ def load_data(country):
     try:
         return pd.read_csv(filename)
     except FileNotFoundError:
-        st.warning(f"⚠️ File not found: {filename}")
+        st.warning(f" File not found: {filename}")
         return pd.DataFrame()
 
